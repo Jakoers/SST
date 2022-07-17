@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
 
-project(SST VERSION 0.1)
+project(SST VERSION 0.2)
 
 set(CMAKE_C_STANDARD 99)
 
@@ -11,4 +11,4 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 
 configure_file(${PROJECT_SOURCE_DIR}/include/SSTConfig.h.in ${PROJECT_SOURCE_DIR}/include/SSTConfig.h)
 
-add_executable(SST utils.c main.c)
+add_executable(SST utils.c shutdownFuncs.c main.c)
