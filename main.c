@@ -32,6 +32,15 @@ int main(int argc, char *argv[])
     }
     else if (strcmp(argv[1], "-t") == 0)
     {
+        ret = shutdown_after(argv[2]);
+        if(ret==-1)
+        {
+            printf("Wrong format\n\n");
+            printf("Usage:\n");
+            printf("%s -t hh:mm:ss:shutdown at next hh:mm:ss (24 hour clock)\n\n", programName);
+            printf("For example:\n");
+            printf("%s -t 1:30:04\n", programName);
+        }
     }
     else if (strcmp(argv[1], "-c") == 0)
     {
